@@ -1,7 +1,8 @@
 FROM centos:7 
 Maintainer "Sanjay556@yahoo.com"
 
-RUN git clone git://git.postgresql.org/git/postgres-xl.git \
+RUN yum install git -y \
+  && git clone git://git.postgresql.org/git/postgres-xl.git \
   && cd postgres-xl \
   && ./configure \
   && make -j4 \
